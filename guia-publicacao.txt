@@ -1,0 +1,5 @@
+function doPost(e) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Inscritos");
+  ss.appendRow([new Date(), e.parameter.nome, e.parameter.telefone, e.parameter.cidade, e.parameter.camisa]);
+  return ContentService.createTextOutput("OK");
+}
